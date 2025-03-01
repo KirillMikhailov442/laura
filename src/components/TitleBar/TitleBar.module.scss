@@ -1,0 +1,46 @@
+@import '@styles/mixins.scss';
+
+.titleBar {
+  display: flex;
+  justify-content: space-between;
+  height: 32px;
+}
+
+.logo {
+  color: var(--black-60);
+  margin-left: 1rem;
+}
+
+.nav {
+  display: flex;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 52px;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: var(--black-20);
+  }
+}
+
+.close:hover {
+  background-color: var(--red-70);
+  color: var(--white-100);
+}
+
+.person {
+  @include linear-gradient-blue();
+  color: var(--white-100);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding-inline: 5px;
+  transition: all 0.2s ease;
+
+  &:hover {
+    filter: brightness(0.9);
+  }
+}

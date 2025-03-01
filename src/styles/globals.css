@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "./normalize.css";
+@import './colors.css';
+
+body{
+    background-color: var(--white-100);
+    color: var(--black-90);
+}
+
+html{
+    font-size: 18px;
+}
+
+.pageFull{
+    width: 100dvw;
+    height: 100dvh;
+}
+
+.container{
+    width: 1440px;
+    padding-inline: 0.8rem;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h5{
+    font-size: 1.2rem;
+}
+
+h4{
+    font-size: 1.4rem;
+}
+
+h3{
+    font-size: 1.6rem;
+}
+
+h2{
+    font-size: 1.8rem;
+}
+
+h1{
+    font-size: 2.2rem;
+}

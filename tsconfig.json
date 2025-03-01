@@ -1,0 +1,40 @@
+{
+  "compilerOptions": {
+    "target": "ES2017",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@assets/*": ["./src/assets/*"],
+      "@images/*": ["./src/assets/images/*"],
+      "@sounds/*": ["./src/assets/sounds/*"],
+      "@videos/*": ["./src/assets/videos/*"],
+      "@styles/*": ["./src/styles/*"],
+      "@screens/*": ["./src/screens/*"],
+      "@components/*": ["./src/components/*"],
+      "@services/*": ["./src/components/services/*"],
+      "@store/*": ["./src/store/*"],
+      "@helpers/*": ["./src/utils/helpers/*"],
+      "@consts/*": ["./src/utils/constants/*"],
+      "@UI/*": ["./src/components/UI/*"],
+      "@layouts/*": ["./src/components/layouts/*"],
+      "@/*": ["./src/*"],
+    }
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "exclude": ["node_modules"]
+}
