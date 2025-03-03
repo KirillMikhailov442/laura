@@ -1,5 +1,5 @@
 import styles from './Steps.module.scss';
-import { FC } from 'react';
+import { FC, useState } from 'react';
 import { motion } from 'framer-motion';
 import useAppDispatch from '@/hooks/useAppDispatch';
 import pin_code_img from '@images/pin-code.png';
@@ -10,9 +10,13 @@ import { nextStep } from '@store/slices/registration';
 
 const StepConfirm = (): FC => {
   const dispatch = useAppDispatch();
+  const [isNext, setNext] = useState(true);
 
   const handleNext = () => {
-    dispatch(nextStep());
+    if (isNext) {
+      setNext(false);
+      dispatch(nextStep());
+    }
   };
 
   return (
