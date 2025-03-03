@@ -10,12 +10,13 @@ const InputText: FC<InputProps> = ({
   onChange,
   onBlur,
   placeholder,
+  className,
   name,
   ...props
 }) => {
   const id = useId();
   return (
-    <div className={styles.wrapper}>
+    <div className={clsx(styles.wrapper, className)}>
       <label htmlFor={id} className={styles.label}>
         {label}
       </label>

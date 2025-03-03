@@ -6,6 +6,8 @@
 .textarea {
   padding: 0.6rem 1rem;
   border: 1.5px solid #d6d6d6;
+  background-color: var(--white-100);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   transition: border-color 0.2s ease;
   outline: none;
   border-radius: 8px;

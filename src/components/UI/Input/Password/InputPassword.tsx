@@ -1,3 +1,5 @@
+'use client';
+
 import { FC, useId, useState } from 'react';
 import styles from './InputPassword.module.scss';
 import { InputProps } from '..';

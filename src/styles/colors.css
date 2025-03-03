@@ -1,6 +1,8 @@
 
 :root{
    --white-100: white;
+   --white-90: #f3f3f3;
+   --white-80: #eff3f9;
    --white-60: rgba(255, 255, 255, 0.6);
    --blue-50: #62A1DD;
    --blue-80: #417FC6;
@@ -10,4 +12,6 @@
    --black-40: rgba(0, 0, 0, 0.4);
    --black-20: rgba(0, 0, 0, 0.2);
    --gray-100: gray;
+
+   --gray-50: rgb(253, 249, 249);
 }

@@ -40,6 +40,7 @@ const StepResult: FC = () => {
       animate={{ opacity: 1, x: 0 }}
       exit={{ opacity: 0, x: -30 }}
       className={styles.form}
+      onSubmit={formik.handleSubmit}
     >
       <Avatar className={styles.avatar} size={'xl'} name={'Mojave'} />
       <Input
@@ -48,8 +49,19 @@ const StepResult: FC = () => {
         placeholder={'Enter name'}
         defaultValue={'Mojave'}
         readOnly={isEdit}
+        onChange={formik.handleChange}
+        onBlur={formik.handleBlur}
+        name={'firstName'}
+        error={formik.errors.firstName}
       />
-      <Input type={'text'} label={'Surnname'} placeholder={'Enter surname'} />
+      <Input
+        onChange={formik.handleChange}
+        onBlur={formik.handleBlur}
+        name={'lastName'}
+        type={'text'}
+        label={'Surnname'}
+        placeholder={'Enter surname'}
+      />
       <Input
         type={'text'}
         label={'Nickname'}
@@ -57,6 +69,10 @@ const StepResult: FC = () => {
         icon={<AtSign size={18} />}
         defaultValue={'@Mojave'}
         readOnly={isEdit}
+        onChange={formik.handleChange}
+        onBlur={formik.handleBlur}
+        name={'nickname'}
+        error={formik.errors.nickname}
       />
       <Input
         type={'email'}
@@ -64,12 +80,19 @@ const StepResult: FC = () => {
         placeholder={'Enter email'}
         defaultValue={'fakemail@gmail.com'}
         readOnly={isEdit}
+        onChange={formik.handleChange}
+        onBlur={formik.handleBlur}
+        name={'email'}
+        error={formik.errors.email}
       />
       <Textarea
         label={'Description'}
         placeholder={'Enter description'}
         rows={4}
         readOnly={isEdit}
+        onChange={formik.handleChange}
+        onBlur={formik.handleBlur}
+        name={'description'}
       />
       <footer className={styles.footer}>
         <Button onClick={handleEdit} variant={'outline'}>

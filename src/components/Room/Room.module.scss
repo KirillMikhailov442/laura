@@ -1,0 +1,25 @@
+.room {
+  padding: 0.5rem 1rem;
+  display: flex;
+  gap: 0.7rem;
+}
+
+.content {
+  flex-grow: 1;
+}
+
+.date {
+  font-size: 0.9em;
+}
+
+.text {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+
+  &Container {
+    overflow: hidden;
+    max-width: 200px;
+  }
+}

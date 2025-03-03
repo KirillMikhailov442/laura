@@ -1,5 +1,6 @@
+import SidebarRooms from '@components/SidebarRooms/SidebarRooms';
+import { Splitter } from 'antd';
 import type { Metadata } from 'next';
-import '@styles/globals.css';
 import { ReactNode } from 'react';
 
 export const metadata: Metadata = {
@@ -12,5 +13,12 @@ export default function MainLayout({
 }: Readonly<{
   children: ReactNode;
 }>) {
-  return <main className="main">{children}</main>;
+  return (
+    <>
+      <Splitter>
+        <SidebarRooms />
+        <Splitter.Panel>{children}</Splitter.Panel>
+      </Splitter>
+    </>
+  );
 }

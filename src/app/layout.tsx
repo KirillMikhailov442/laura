@@ -3,6 +3,7 @@ import '@styles/globals.css';
 import { ReactNode } from 'react';
 import { Open_Sans } from 'next/font/google';
 import Providers from '@layouts/Providers/Providers';
+import { TitleBar } from '@components/index';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
 
 const openSans = Open_Sans({
   subsets: ['latin'],
-  weight: ['400', '500', '600'],
+  weight: ['400', '500', '600', '700'],
 });
 
 export default function RootLayout({
@@ -22,7 +23,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={openSans.className}>
-        <Providers>{children}</Providers>
+        <div className="wrapper">
+          <Providers>
+            <TitleBar />
+            {children}
+          </Providers>
+        </div>
       </body>
     </html>
   );

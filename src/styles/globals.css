@@ -6,7 +6,7 @@
 @import './colors.css';
 
 body{
-    background-color: var(--white-100);
+    background-color: var(--white-80);
     color: var(--black-90);
 }
 
@@ -17,6 +17,17 @@ html{
 .pageFull{
     width: 100dvw;
     height: 100dvh;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    height: 100dvh;
+}
+
+.main{
+    flex-grow: 1;
+    background-color: var(--white-90);
 }
 
 .container{
