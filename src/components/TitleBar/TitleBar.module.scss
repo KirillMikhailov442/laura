@@ -1,9 +1,10 @@
 @import '@styles/mixins.scss';
+@import '@styles/vars.scss';
 
 .titleBar {
   display: flex;
   justify-content: space-between;
-  height: 32px;
+  height: $TitlebarHeight;
 }
 
 .logo {

@@ -15,7 +15,7 @@ export default function MainLayout({
 }>) {
   return (
     <>
-      <Splitter>
+      <Splitter lazy>
         <SidebarRooms />
         <Splitter.Panel>{children}</Splitter.Panel>
       </Splitter>

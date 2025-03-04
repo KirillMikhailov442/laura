@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import './normalize.css';
+@import './colors.css';
+@import './vars.scss';
+
+body {
+  background-color: var(--white-80);
+  color: var(--black-90);
+}
+
+html {
+  font-size: 18px;
+}
+
+.pageFull {
+  width: 100dvw;
+  height: 100dvh;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100dvh;
+}
+
+.main {
+  flex-grow: 1;
+  background-color: var(--white-90);
+  height: calc(100dvh - $TitlebarHeight);
+}
+
+.container {
+  width: 1440px;
+  padding-inline: 0.8rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h5 {
+  font-size: 1.2rem;
+}
+
+h4 {
+  font-size: 1.4rem;
+}
+
+h3 {
+  font-size: 1.6rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+}
+
+h1 {
+  font-size: 2.2rem;
+}

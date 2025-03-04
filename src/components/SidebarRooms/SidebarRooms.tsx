@@ -4,6 +4,7 @@ import { Splitter } from 'antd';
 import { Menu, Search } from 'lucide-react';
 import Input from '@components/UI/Input';
 import Room from '@components/Room/Room';
+import clsx from 'clsx';
 
 const SidebarRooms: FC = () => {
   return (
@@ -11,7 +12,7 @@ const SidebarRooms: FC = () => {
       defaultSize={400}
       min={300}
       max={'45%'}
-      className={styles.aside}
+      className={clsx(styles.aside, 'sidebar')}
     >
       <header className={styles.header}>
         <button className={styles.hamburger}>
@@ -25,26 +26,19 @@ const SidebarRooms: FC = () => {
         />
       </header>
       <div className={styles.rooms}>
-        <ul className={styles.list}>
-          <li className={styles.listItem}>
-            <Room />
-          </li>
-          <li className={styles.listItem}>
-            <Room />
-          </li>
-          <li className={styles.listItem}>
-            <Room />
-          </li>
-          <li className={styles.listItem}>
-            <Room />
-          </li>
-          <li className={styles.listItem}>
-            <Room />
-          </li>
-          <li className={styles.listItem}>
-            <Room />
-          </li>
-        </ul>
+        <Room />
+        <Room />
+        <Room />
+        <Room />
+        <Room />
+        <Room />
+        <Room />
+        <Room />
+        <Room />
+        <Room />
+        <Room />
+        <Room />
+        <Room />
       </div>
     </Splitter.Panel>
   );

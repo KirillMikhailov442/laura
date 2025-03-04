@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import '@styles/globals.css';
+import '@styles/globals.scss';
 import { ReactNode } from 'react';
 import { Open_Sans } from 'next/font/google';
 import Providers from '@layouts/Providers/Providers';
