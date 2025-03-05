@@ -1,10 +1,11 @@
 import { FC } from 'react';
 import styles from './SidebarRooms.module.scss';
 import { Splitter } from 'antd';
-import { Menu, Search } from 'lucide-react';
+import { Search } from 'lucide-react';
 import Input from '@components/UI/Input';
 import Room from '@components/Room/Room';
 import clsx from 'clsx';
+import MenuButton from './Menu';
 
 const SidebarRooms: FC = () => {
   return (
@@ -15,9 +16,7 @@ const SidebarRooms: FC = () => {
       className={clsx(styles.aside, 'sidebar')}
     >
       <header className={styles.header}>
-        <button className={styles.hamburger}>
-          <Menu size={25} />
-        </button>
+        <MenuButton />
         <Input
           className={styles.input}
           icon={<Search size={16} />}

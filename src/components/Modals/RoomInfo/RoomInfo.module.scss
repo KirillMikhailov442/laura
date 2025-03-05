@@ -1,0 +1,29 @@
+@import '@styles/vars.scss';
+
+.drawer {
+  height: calc(100% - $TitlebarHeight);
+  top: $TitlebarHeight !important;
+  background-color: var(--white-100) !important;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding: 2rem 1rem;
+}
+
+.avatar {
+  margin-inline: auto;
+}
+
+.fullName,
+.email {
+  font-weight: 600;
+}
+
+.email {
+  font-size: 0.9em;
+}
+
+.description {
+  font-size: 0.8em;
+  margin-top: 1rem;
+}

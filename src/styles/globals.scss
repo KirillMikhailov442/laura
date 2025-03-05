@@ -5,6 +5,7 @@
 @import './normalize.css';
 @import './colors.css';
 @import './vars.scss';
+@import './fonts.scss';
 
 body {
   background-color: var(--white-80);
@@ -59,4 +60,16 @@ h2 {
 
 h1 {
   font-size: 2.2rem;
+}
+
+.ant-tooltip {
+  z-index: 100000 !important;
+}
+
+.chakra-modal__overlay {
+  top: $TitlebarHeight !important;
+}
+
+.chakra-modal__content-container {
+  top: calc($TitlebarHeight + 10px) !important;
 }

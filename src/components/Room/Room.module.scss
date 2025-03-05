@@ -20,10 +20,12 @@
   font-size: 1.1rem !important;
   font-weight: 700;
   margin-bottom: 0 !important;
+  font-family: inherit !important;
 }
 
 .text {
   margin-bottom: 0 !important;
+  font-family: inherit !important;
 }
 
 .date {
@@ -35,4 +37,5 @@
   display: flex;
   align-items: center;
   gap: 0.4rem;
+  font-family: inherit !important;
 }

@@ -1,5 +1,5 @@
 .header {
-  min-height: 80px;
+  min-height: 70px;
   padding-inline: 1rem;
   background-color: var(--white-100);
   display: flex;
@@ -15,6 +15,7 @@
 .left {
   display: flex;
   gap: 1rem;
+  cursor: pointer;
 }
 
 .online {

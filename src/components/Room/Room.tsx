@@ -22,7 +22,7 @@ const Room: FC = () => {
       label: (
         <p className={styles.dropdownItem}>
           <Pin size={16} />
-          To pin
+          Pin
         </p>
       ),
       key: '2',

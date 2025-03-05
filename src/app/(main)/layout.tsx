@@ -1,3 +1,4 @@
+import Modals from '@components/Modals';
 import type { Metadata } from 'next';
 import { ReactNode } from 'react';
 
@@ -11,5 +12,10 @@ export default function MainLayout({
 }: Readonly<{
   children: ReactNode;
 }>) {
-  return <main className="main">{children}</main>;
+  return (
+    <main className="main">
+      <Modals />
+      {children}
+    </main>
+  );
 }

@@ -1,0 +1,84 @@
+@import '@styles/mixins.scss';
+
+.modal {
+  border-radius: 15px;
+  transition: all 0.4s ease;
+  overflow: hidden;
+  position: relative;
+}
+
+.content {
+  padding-inline: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.gradient {
+  height: 150px;
+  flex-shrink: 0;
+  background-color: #4158d0;
+  @include linear-gradient-rainbow;
+}
+
+.nav {
+  margin-inline: 1rem;
+}
+
+.avatar {
+  margin-top: -55px;
+  border: 4.5px solid var(--white-100);
+  user-select: none;
+}
+
+.nickname {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--blue-100);
+  font-size: 1rem !important;
+}
+
+.content {
+  margin-block: 1.5rem;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1rem;
+
+  & > button {
+    padding: 0.5rem 1.5rem;
+  }
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.fullName,
+.email {
+  font-weight: 600;
+}
+
+.email {
+  font-size: 0.9em;
+}
+
+.description {
+  font-size: 0.8em;
+}
+
+.close {
+  float: right;
+  color: white;
+  padding: 4px;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.3);
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+}
