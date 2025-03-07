@@ -1,7 +1,6 @@
+import Modals from '@components/Modals';
 import type { Metadata } from 'next';
-import '@styles/globals.css';
 import { ReactNode } from 'react';
-import { TitleBar } from '@components/index';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -14,9 +13,9 @@ export default function MainLayout({
   children: ReactNode;
 }>) {
   return (
-    <>
-      <TitleBar />
+    <main className="main">
+      <Modals />
       {children}
-    </>
+    </main>
   );
 }

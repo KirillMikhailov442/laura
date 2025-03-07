@@ -3,20 +3,21 @@ import { X, Minus, Square } from 'lucide-react';
 import clsx from 'clsx';
 
 import styles from './TitleBar.module.scss';
+import MenuButton from './components/MenuButton';
 
 const TitleBar: FC = () => {
   return (
     <div className={styles.titleBar}>
-      <b className={styles.logo}>Project Laura</b>
+      <MenuButton />
       <nav className={styles.nav}>
         <button tabIndex={-1} className={styles.button}>
-          <Minus size={18} />
+          <Minus size={22} />
         </button>
         <button tabIndex={-1} className={styles.button}>
-          <Square size={16} />
+          <Square size={18} />
         </button>
         <button tabIndex={-1} className={clsx(styles.button, styles.close)}>
-          <X size={20} />
+          <X size={22} />
         </button>
       </nav>
     </div>

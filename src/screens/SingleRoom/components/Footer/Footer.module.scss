@@ -1,0 +1,45 @@
+@import '@styles/mixins.scss';
+
+.footer {
+  min-height: 60px;
+  background: var(--white-100);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding-inline: 1rem;
+}
+
+.button {
+  padding: 0.5rem;
+  color: var(--black-60);
+  transition: all 0.4s ease;
+
+  &:hover {
+    color: var(--black-100);
+  }
+}
+
+.send {
+  @include linear-gradient-blue;
+  color: var(--white-100);
+  border-radius: 50%;
+  padding: 0.6rem;
+
+  &:hover {
+    color: var(--white-100);
+  }
+}
+
+.textarea {
+  border: none !important;
+  font-family: inherit !important;
+  &:focus {
+    outline: none !important;
+  }
+}
+
+.emojy {
+  position: absolute !important;
+  bottom: 4rem;
+  right: 1rem;
+}

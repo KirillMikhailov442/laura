@@ -1,9 +1,12 @@
 @import '@styles/mixins.scss';
+@import '@styles/vars.scss';
 
 .titleBar {
   display: flex;
   justify-content: space-between;
-  height: 32px;
+  height: $TitlebarHeight;
+  background-color: var(--white-100);
+  -webkit-user-select: none;
 }
 
 .logo {
@@ -23,7 +26,7 @@
   transition: all 0.3s ease;
 
   &:hover {
-    background-color: var(--black-20);
+    background-color: var(--white-90);
   }
 }
 

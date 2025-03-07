@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="59104df4-9fc3-4f18-a0cd-9689c47a71df" name="Changes" comment="" />
+    <list default="true" id="59104df4-9fc3-4f18-a0cd-9689c47a71df" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/styles/fonts.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UI/Input/Email/InputEmail.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/Input/Email/InputEmail.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UI/Input/Password/InputPassword.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/Input/Password/InputPassword.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UI/Input/Text/InputText.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/Input/Text/InputText.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UI/Textarea/Textarea.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/Textarea/Textarea.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/SignUp/components/Steps/StepResult.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/SignUp/components/Steps/StepResult.tsx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,10 +23,13 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="TypeScript File" />
-        <option value="SCSS File" />
         <option value="TypeScript JSX File" />
+        <option value="SCSS File" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -31,7 +43,9 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/kirill/Документы/Проекты/laura/src/assets&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/kirill/Документы/Проекты/laura/src/assets/images&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;SCSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
@@ -46,6 +60,11 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/assets/images" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -66,6 +85,8 @@
       <workItem from="1740858036500" duration="5548000" />
       <workItem from="1740864729725" duration="3853000" />
       <workItem from="1740870659681" duration="2104000" />
+      <workItem from="1740947157915" duration="6314000" />
+      <workItem from="1740996616704" duration="1025000" />
     </task>
     <servers />
   </component>

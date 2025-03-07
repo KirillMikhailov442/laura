@@ -1,0 +1,55 @@
+@import '@styles/vars.scss';
+
+.drawer {
+  height: calc(100% - $TitlebarHeight);
+  top: $TitlebarHeight !important;
+  background-color: var(--white-100) !important;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding-block: 0.4rem;
+}
+
+.header {
+  padding: 0.7rem 1rem;
+  border-bottom: 2px solid var(--white-90);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.fullName {
+  font-weight: 600;
+}
+
+.nickname {
+  font-size: 0.8em;
+  color: var(--gray-100);
+}
+
+.list {
+  flex-grow: 1;
+  overflow-y: scroll;
+}
+
+.listItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.8rem 1rem;
+  font-weight: 600;
+  width: 100%;
+  transition: all 0.4s ease;
+
+  &:hover,
+  &:focus {
+    background-color: var(--white-90);
+  }
+}
+
+.footer {
+  color: var(--gray-100);
+  font-size: 0.7em;
+  font-weight: 600;
+  padding-inline: 0.3rem;
+}
