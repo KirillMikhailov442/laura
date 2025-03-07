@@ -29,14 +29,15 @@ const MenuModal: FC = () => {
       <DrawerContent className={styles.drawer}>
         <header className={styles.header}>
           <Avatar name="Mojave" />
-          <h5 className={styles.fullName}>Mojave Kik</h5>
+          <div>
+            <h5 className={styles.fullName}>Mojave Kik</h5>
+            <p className={styles.nickname}>@Mojave</p>
+          </div>
         </header>
         <ul className={styles.list}>
           <li>
             <button
-              onClick={() =>
-                dispatch(openModal({ key: 'profile', isCloseAllModal: false }))
-              }
+              onClick={() => dispatch(openModal({ key: 'profile' }))}
               className={styles.listItem}
             >
               <UserCircle2Icon size={25} /> Profile

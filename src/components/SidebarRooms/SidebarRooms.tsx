@@ -5,18 +5,16 @@ import { Search } from 'lucide-react';
 import Input from '@components/UI/Input';
 import Room from '@components/Room/Room';
 import clsx from 'clsx';
-import MenuButton from './Menu';
 
 const SidebarRooms: FC = () => {
   return (
     <Splitter.Panel
-      defaultSize={400}
+      defaultSize={350}
       min={300}
       max={'45%'}
       className={clsx(styles.aside, 'sidebar')}
     >
       <header className={styles.header}>
-        <MenuButton />
         <Input
           className={styles.input}
           icon={<Search size={16} />}

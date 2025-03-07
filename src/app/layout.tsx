@@ -24,8 +24,11 @@ export default function RootLayout({
     <html lang="en">
       <body className={openSans.className}>
         <div className="wrapper">
-          <TitleBar />
-          <Providers>{children}</Providers>
+          <Providers>
+            {' '}
+            <TitleBar />
+            {children}
+          </Providers>
         </div>
       </body>
     </html>

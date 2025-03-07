@@ -31,7 +31,7 @@ const ProfileModal: FC = () => {
   };
 
   const handleExit = () => {
-    push('/auth');
+    push('/signin');
   };
 
   return (

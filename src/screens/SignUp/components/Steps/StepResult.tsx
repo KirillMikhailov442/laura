@@ -1,5 +1,5 @@
 import styles from './Steps.module.scss';
-import { FC, useState } from 'react';
+import { FC, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Avatar } from '@chakra-ui/react';
 import { Button, Input, Textarea } from '@/components';
@@ -9,6 +9,7 @@ import * as Yup from 'yup';
 
 const StepResult: FC = () => {
   const [isEdit, setIsEdit] = useState(false);
+  const inputRef = useRef<HTMLInputElement>(null);
 
   const formik = useFormik({
     initialValues: {
@@ -22,7 +23,6 @@ const StepResult: FC = () => {
       firstName: Yup.string().trim().required('Enter name'),
       nickname: Yup.string()
         .trim()
-        .matches(/^@/, 'Incorrect nickname')
         .min(8, 'Incorrect nickname')
         .max(25, 'Incorrect nickname')
         .required('Enter nickname'),
@@ -33,6 +33,7 @@ const StepResult: FC = () => {
 
   const handleEdit = () => {
     setIsEdit(prev => !prev);
+    if (inputRef.current) inputRef.current.focus();
   };
   return (
     <motion.form
@@ -48,11 +49,12 @@ const StepResult: FC = () => {
         label={'Name'}
         placeholder={'Enter name'}
         defaultValue={'Mojave'}
-        readOnly={isEdit}
+        readOnly={!isEdit}
         onChange={formik.handleChange}
         onBlur={formik.handleBlur}
         name={'firstName'}
         error={formik.errors.firstName}
+        ref={inputRef}
       />
       <Input
         onChange={formik.handleChange}
@@ -61,14 +63,15 @@ const StepResult: FC = () => {
         type={'text'}
         label={'Surnname'}
         placeholder={'Enter surname'}
+        readOnly={!isEdit}
       />
       <Input
         type={'text'}
         label={'Nickname'}
         placeholder={'Enter @nickname'}
         icon={<AtSign size={18} />}
-        defaultValue={'@Mojave'}
-        readOnly={isEdit}
+        defaultValue={'Mojave'}
+        readOnly={!isEdit}
         onChange={formik.handleChange}
         onBlur={formik.handleBlur}
         name={'nickname'}
@@ -79,7 +82,7 @@ const StepResult: FC = () => {
         label={'Email'}
         placeholder={'Enter email'}
         defaultValue={'fakemail@gmail.com'}
-        readOnly={isEdit}
+        readOnly={!isEdit}
         onChange={formik.handleChange}
         onBlur={formik.handleBlur}
         name={'email'}
@@ -89,7 +92,7 @@ const StepResult: FC = () => {
         label={'Description'}
         placeholder={'Enter description'}
         rows={4}
-        readOnly={isEdit}
+        readOnly={!isEdit}
         onChange={formik.handleChange}
         onBlur={formik.handleBlur}
         name={'description'}

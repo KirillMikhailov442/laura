@@ -8,7 +8,7 @@ import clsx from 'clsx';
 import { PinInput, PinInputField } from '@chakra-ui/react';
 import { nextStep } from '@store/slices/registration';
 
-const StepConfirm = (): FC => {
+const StepConfirm: FC = () => {
   const dispatch = useAppDispatch();
   const [isNext, setNext] = useState(true);
 
@@ -44,6 +44,7 @@ const StepConfirm = (): FC => {
           placeholder={'?'}
           type={'alphanumeric'}
           size={'lg'}
+          autoFocus
         >
           <PinInputField className={styles.pinInputField} />
           <PinInputField className={styles.pinInputField} />

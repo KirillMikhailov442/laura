@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, useEffect, useRef } from 'react';
 import styles from './Steps.module.scss';
 import { Button, Input } from '@components/index';
 import { motion } from 'framer-motion';
@@ -9,6 +9,7 @@ import * as Yup from 'yup';
 
 const StepBase: FC = () => {
   const dispatch = useAppDispatch();
+  const inputRef = useRef<HTMLInputElement>(null);
   const formik = useFormik({
     initialValues: {
       firstName: '',
@@ -35,6 +36,11 @@ const StepBase: FC = () => {
     }),
     onSubmit: () => {},
   });
+
+  useEffect(() => {
+    if (inputRef.current) inputRef.current.focus();
+  }, []);
+
   return (
     <motion.form
       onSubmit={formik.handleSubmit}
@@ -49,8 +55,9 @@ const StepBase: FC = () => {
         name={'firstName'}
         error={formik.errors.firstName}
         type="text"
-        label="Имя"
-        placeholder="Введите имя"
+        label="Name"
+        placeholder="Enter name"
+        ref={inputRef}
       />
       <Input
         onChange={formik.handleChange}
@@ -58,8 +65,8 @@ const StepBase: FC = () => {
         name={'lastName'}
         error={formik.errors.lastName}
         type="text"
-        label="Фамилия (необязательно)"
-        placeholder="Введите фамилию"
+        label="Surname (not necessarily)"
+        placeholder="Enter surname"
       />
       <Input
         onChange={formik.handleChange}
@@ -68,7 +75,7 @@ const StepBase: FC = () => {
         error={formik.errors.email}
         type="email"
         label="Email"
-        placeholder="Введите e-mail"
+        placeholder="Enter email"
       />
       <Input
         onChange={formik.handleChange}
@@ -76,8 +83,8 @@ const StepBase: FC = () => {
         name={'password'}
         error={formik.errors.password}
         type="password"
-        label="Пароль"
-        placeholder="Введите пароль"
+        label="Password"
+        placeholder="Enter password"
       />
       <Input
         onChange={formik.handleChange}
@@ -85,8 +92,8 @@ const StepBase: FC = () => {
         name={'copyOfPassword'}
         error={formik.errors.copyOfPassword}
         type="password"
-        label="Повторите пароль"
-        placeholder="Повторите пароль"
+        label="Repeat password"
+        placeholder="Repeat password"
       />
       <Button
         disabled={Object.keys(formik.errors).length >= 1}

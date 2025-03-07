@@ -11,12 +11,20 @@
 }
 
 .header {
-  padding: 0.5rem 1rem;
+  padding: 0.7rem 1rem;
   border-bottom: 2px solid var(--white-90);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
 }
 
 .fullName {
   font-weight: 600;
+}
+
+.nickname {
+  font-size: 0.8em;
+  color: var(--gray-100);
 }
 
 .list {
@@ -28,8 +36,7 @@
   display: flex;
   align-items: center;
   gap: 1rem;
-  padding: 0.5rem 1rem;
-  margin-block: 0.3rem;
+  padding: 0.8rem 1rem;
   font-weight: 600;
   width: 100%;
   transition: all 0.4s ease;

@@ -55,7 +55,7 @@ const Room: FC = () => {
       label: (
         <p className={styles.dropdownItem}>
           <DoorOpen size={16} />
-          Leave room
+          Leave from chat
         </p>
       ),
       key: '4',

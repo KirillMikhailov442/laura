@@ -1,5 +1,5 @@
 import styles from './Steps.module.scss';
-import { FC } from 'react';
+import { FC, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { Button, Input, Textarea } from '@/components';
 import { AtSign } from 'lucide-react';
@@ -11,6 +11,7 @@ import * as Yup from 'yup';
 
 const StepDescription: FC = () => {
   const dispatch = useAppDispatch();
+  const inputRef = useRef<HTMLInputElement>(null);
   const formik = useFormik({
     initialValues: {
       nickname: '',
@@ -20,13 +21,17 @@ const StepDescription: FC = () => {
     validationSchema: Yup.object({
       nickname: Yup.string()
         .trim()
-        .matches(/^@/, 'Incorrect nickname')
-        .min(8, 'Incorrect nickname')
-        .max(25, 'Incorrect nickname')
+        .min(6, 'Nickname must be at least 6 characters')
+        .max(25, 'The nickname must be no more than 25 characters')
         .required('Enter nickname'),
     }),
     onSubmit: () => {},
   });
+
+  useEffect(() => {
+    if (inputRef.current) inputRef.current.focus();
+  }, []);
+
   return (
     <motion.form
       initial={{ opacity: 0, x: 30 }}
@@ -45,6 +50,7 @@ const StepDescription: FC = () => {
         label={'Nickname'}
         placeholder={'Enter @nickname'}
         icon={<AtSign size={18} />}
+        ref={inputRef}
       />
       <Textarea
         onChange={formik.handleChange}
